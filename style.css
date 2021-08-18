@@ -247,6 +247,7 @@ img.profile-image {
 
 .summary a:hover {
   box-shadow: none;
+  border-bottom: 1px dotted var(--text);
 }
 
 .skills ul {
