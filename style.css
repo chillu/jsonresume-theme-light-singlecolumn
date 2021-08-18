@@ -196,9 +196,8 @@ a:hover {
   box-shadow: var(--primary) 0px -1.2em 0px inset;
 }
 
-section ul {
-  margin-top: 0.5rem;
-  margin-left: 2.5rem;
+ul {
+  margin: 1.5rem 0 1.5rem 3.0rem;
   list-style: disc;
 }
 
@@ -210,15 +209,17 @@ img.profile-image {
 
 .contact {
   padding: 1rem 0;
-  font-size: 1rem;
 }
 
-.contact ul {
+ul.inline-list {
   display: flex;
   flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.contact li {
+ul.inline-list li {
   margin-bottom: 0;
   margin-right: 0.5rem;
   padding-right: 0.5rem;
@@ -226,12 +227,29 @@ img.profile-image {
   border-right: 1px solid var(--sub-headline);
 }
 
-.contact li:first-of-type {
+ul.inline-list li:first-of-type {
   padding-left: 0;
 }
 
-.contact li:last-of-type {
+ul.inline-list li:last-of-type {
   border-right: none;
+}
+
+ul.pill {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+ul.pill li {
+  margin-bottom: 0.5rem;
+  margin-right: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  background-color: var(--secondary);
+  white-space: nowrap;
+  list-style: none;
+  font-size: 0.6rem;
 }
 
 .summary .highlight {
@@ -249,27 +267,6 @@ img.profile-image {
 .summary a:hover {
   box-shadow: none;
   border-bottom: 1px dotted var(--text);
-}
-
-.skills ul {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
-}
-
-.skills li {
-  margin-bottom: 0.5rem;
-  margin-right: 0.5rem;
-  padding: 0.25rem 0.5rem;
-  background-color: var(--secondary);
-  white-space: nowrap;
-  list-style: none;
-  font-size: 0.6rem;
-}
-
-.position {
-  margin-bottom: 1.5rem;
 }
 
 .overview {
