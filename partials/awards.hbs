@@ -1,9 +1,8 @@
 {{#if resume.awards.length}}
+<section id="awards">
+	<h2>Awards</h2>
 	{{#each resume.awards}}
-		<section class="award">
-			{{#if @first}}
-				<h2>Awards</h2>
-			{{/if}}
+		<div class="item">
 			<div class="overview">
 				<h3 class="title">
 					{{#if url}}
@@ -23,6 +22,7 @@
 			{{#if summary}}
 				<p class="summary">{{{summary}}}</p>
 			{{/if}}
-		</section>
+		</div>
 	{{/each}}
+</section>
 {{/if}}

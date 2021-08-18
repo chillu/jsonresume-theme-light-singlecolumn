@@ -1,6 +1,7 @@
 {{#if resume.volunteer.length}}
+<section id="volunteer">
 	{{#each resume.volunteer}}
-		<section class="volunteer">
+		<div class="item">
 			{{#if @first}}
 				<h2>Volunteer</h2>
 			{{/if}}
@@ -30,6 +31,7 @@
 				{{/each}}
 			</ul>
 			{{/if}}
-		</section>
+		</div>
 	{{/each}}
+</section>
 {{/if}}

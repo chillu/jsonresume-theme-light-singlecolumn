@@ -1,9 +1,8 @@
 {{#if resume.certificates.length}}
+<section id="certificates">
+	<h2>Certificates</h2>
 	{{#each resume.certificates}}
-		<section class="position">
-			{{#if @first}}
-				<h2>Certificates</h2>
-			{{/if}}
+		<div class="item">
 			<div class="overview">
 				<h3 class="title">
 					{{#if url}}
@@ -19,6 +18,7 @@
 					</p>
 				{{/if}}
 			</div>
-		</section>
+		</div>
 	{{/each}}
+</section>
 {{/if}}

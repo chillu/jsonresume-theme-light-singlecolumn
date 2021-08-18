@@ -1,10 +1,11 @@
 {{#resume.basics}}
+<section id="basics">
   <div class="header">
     <div class="name-label">
       <h1>{{name}}</h1>
       <p>{{label}}</p>
       <div class="contact">
-        <ul>
+        <ul class="inline-list">
           {{#if location}}
             <li class="grey">{{location.city}}, {{location.countryCode}}</li>
           {{/if}}
@@ -46,5 +47,5 @@
   {{#if summary}}
     <p class="summary">{{{summary}}}</p>
   {{/if}}
-
+</section>
 {{/resume.basics}}

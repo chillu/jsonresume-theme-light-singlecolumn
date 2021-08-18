@@ -1,9 +1,7 @@
 {{#if resume.skills.length}}
+<section id="skills">
 	{{#each resume.skills}}
-		<section class="skills">
-			{{#if @first}}
-				<h2>Skills</h2>
-			{{/if}}
+		<div class="item">
             <h3>
                 {{name}}
                 {{#if level}}
@@ -34,6 +32,7 @@
                     {{/each}}
                 </ul>
             {{/if}}
-		</section>
+		</div>
 	{{/each}}
+</section>
 {{/if}}

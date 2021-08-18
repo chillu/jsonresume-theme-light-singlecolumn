@@ -1,7 +1,8 @@
 {{#if resume.work.length}}
+<section id="work">
 	<h2>Work Experience</h2>
 	{{#each resume.work}}
-		<section class="position">
+		<div class="item">
 			<div class="overview">
 				<h3 class="title">
 					{{~#if url~}}
@@ -30,4 +31,5 @@
 			</div>
 		</section>
 	{{/each}}
+</section>
 {{/if}}
