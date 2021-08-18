@@ -5,32 +5,34 @@
 				<h2>Education</h2>
 			{{/if}}
 			<div class="overview">
-				<h3>{{institution}}: {{area}}</h3>
+				<h3>
+					{{~#if url~}}
+						<a target="_blank" rel="noopener" href="{{url}}">{{institution}}</a>,
+					{{~else~}}
+						{{institution}},
+					{{/if}}
+					{{area}}
+				</h3>
 				<p class="date grey">
 					{{> date-range}}
 				</p>
 			</div>
-			{{#if area}}
-				<div class="area">
-					{{area}}
-				</div>
-				{{/if}}
-				{{#if studyType}}
-				<div class="studyType">
-					{{studyType}}
-				</div>
-				{{/if}}
-				{{#if gpa}}
-				<div class="gpa">
-					GPA: {{gpa}}
-				</div>
-				{{/if}}
-				{{#if courses.length}}
-				<ul class="courses">
-					{{#each courses}}
-					<li>{{.}}</li>
-					{{/each}}
-				</ul>
+			{{#if studyType}}
+			<div class="studyType">
+				{{studyType}}
+			</div>
+			{{/if}}
+			{{#if gpa}}
+			<div class="gpa">
+				GPA: {{gpa}}
+			</div>
+			{{/if}}
+			{{#if courses.length}}
+			<ul class="courses">
+				{{#each courses}}
+				<li>{{.}}</li>
+				{{/each}}
+			</ul>
 			{{/if}}
 		</section>
 	{{/each}}
