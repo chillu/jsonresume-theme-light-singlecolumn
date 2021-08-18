@@ -12,15 +12,24 @@
                 </span>
                 {{/if}}
             </h3>
-            {{#if keywords}}
+            {{#if keywordsWithUrl}}
                 <ul>
-                    {{#each keywords}}
+                    {{#each keywordsWithUrl}}
                     <li>
                         {{#if url}}
                             <a href="{{url}}">{{name}}</a>
                         {{else}}
                             {{name}}
                         {{/if}}
+                    </li>
+                    {{/each}}
+                </ul>
+            {{/if}}
+            {{#if keywords}}
+                <ul>
+                    {{#each keywords}}
+                    <li>
+                        {{.}}
                     </li>
                     {{/each}}
                 </ul>
