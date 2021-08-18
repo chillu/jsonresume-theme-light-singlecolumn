@@ -249,6 +249,23 @@ img.profile-image {
   box-shadow: none;
 }
 
+.skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.skills li {
+  margin-bottom: 0.5rem;
+  margin-right: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  background-color: var(--secondary);
+  white-space: nowrap;
+  list-style: none;
+  font-size: 12px;
+}
+
 .pdf {
   color: var(--headline);
   transition: color ease 160ms;

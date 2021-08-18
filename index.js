@@ -8,6 +8,16 @@ function render(resume) {
 	var partialsDir = path.join(__dirname, 'partials');
 	var filenames = fs.readdirSync(partialsDir);
 
+	Handlebars.registerHelper('rating', (ratingStr) => {
+		var [rating, max] = ratingStr.split('/');
+		let result = '';
+		for (let i = 1; i <= max; i++) {
+		  let char = rating >= i ? '★' : '☆';
+		  result += `<span>${char}</span>`;
+		}
+		return new Handlebars.SafeString(result);
+	  });
+
 	filenames.forEach(function (filename) {
 	  var matches = /^([^.]+).hbs$/.exec(filename);
 	  if (!matches) {
