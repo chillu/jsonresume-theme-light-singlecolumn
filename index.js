@@ -8,6 +8,8 @@ function render(resume) {
 	var partialsDir = path.join(__dirname, 'partials');
 	var filenames = fs.readdirSync(partialsDir);
 
+	Handlebars.registerHelper('date', require('helper-date'));
+
 	Handlebars.registerHelper('rating', (ratingStr) => {
 		var [rating, max] = ratingStr.split('/');
 		let result = '';
