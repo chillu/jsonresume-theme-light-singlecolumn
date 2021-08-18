@@ -136,8 +136,8 @@ textarea {
   --text: #333333;
   --headline: #7a7a7a;
   --sub-headline: #7a7a7a;
-  --primary: #A7C3BD;
-  --secondary: #C3E2DC;
+  --primary: #c6d4d2;
+  --secondary: #d1dfdc;
 }
 
 body {
@@ -185,7 +185,7 @@ li {
 
 a {
   transition: box-shadow 160ms ease 0s;
-  box-shadow: var(--secondary) 0px -9px 0px inset;
+  box-shadow: var(--secondary) 0px -6px 0px inset;
   border-bottom: 2px solid var(--primary);
   text-decoration: none;
   color: var(--text);
