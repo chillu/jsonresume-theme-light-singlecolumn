@@ -201,6 +201,54 @@ section ul {
   list-style: disc;
 }
 
+img.profile-image {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+}
+
+.contact {
+  padding: 1rem 0;
+  font-size: 14px;
+}
+
+.contact ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contact li {
+  margin-bottom: 0;
+  margin-right: 0.5rem;
+  padding-right: 0.5rem;
+  white-space: nowrap;
+  border-right: 1px solid var(--sub-headline);
+}
+
+.contact li:first-of-type {
+  padding-left: 0;
+}
+
+.contact li:last-of-type {
+  border-right: none;
+}
+
+.summary .highlight {
+  font-weight: bold;
+}
+
+.summary a {
+  transition: none;
+  box-shadow: none;
+  border-bottom: 1px dotted var(--primary);
+  text-decoration: none;
+  color: var(--text);
+}
+
+.summary a:hover {
+  box-shadow: none;
+}
+
 .pdf {
   color: var(--headline);
   transition: color ease 160ms;

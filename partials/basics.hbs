@@ -1,90 +1,51 @@
 {{#resume.basics}}
-	<h1>{{name}}</h1>
-	<h2>{{label}}</h2>
-	<section id="basics">
-		<div class="contact">
-		{{#if website}}
-		<div class="website">
-			<strong>Website</strong>
-			{{website}}
-		</div>
-		{{/if}}
-		{{#if email}}
-		<div class="email">
-			<strong>Email</strong>
-			{{email}}
-		</div>
-		{{/if}}
-		{{#if phone}}
-		<div class="phone">
-			<strong>Phone</strong>
-			{{phone}}
-		</div>
-		{{/if}}
-		</div>
-		{{#if summary}}
-		<div class="summary">
-			<p>{{summary}}</p>
-		</div>
-		{{/if}}
-		{{#location}}
-		<h3>Location</h3>
-		<section id="location">
-			{{#if address}}
-			<div class="address">
-				<strong>Address</strong>
-				{{address}}
-			</div>
-			{{/if}}
-			{{#if postalCode}}
-			<div class="postalCode">
-				<strong>Postal code</strong>
-				{{postalCode}}
-			</div>
-			{{/if}}
-			{{#if city}}
-			<div class="city">
-				<strong>City</strong>
-				{{city}}
-			</div>
-			{{/if}}
-			{{#if countryCode}}
-			<div class="countryCode">
-				<strong>Country code</strong>
-				{{countryCode}}
-			</div>
-			{{/if}}
-			{{#if region}}
-			<div class="region">
-				<strong>Region</strong>
-				{{region}}
-			</div>
-			{{/if}}
-		</section>
-		{{/location}}
-		{{#if profiles.length}}
-		<h3>Profiles</h3>
-		<section id="profiles">
-			{{#each profiles}}
-			<div class="item">
-				{{#if network}}
-				<strong class="network">
-					{{network}}
-				</strong>
-				{{/if}}
-				{{#if username}}
-				<div class="username">
-					{{username}}
-				</div>
-				{{/if}}
-				{{#if url}}
-				<div class="url">
-					<a href="{{url}}">Link</a>
-				</div>
-				{{/if}}
-			</div>
-			{{/each}}
-		</section>
-		{{/if}}
-	</section>
+  <div class="header">
+    <div class="name-label">
+      <h1>{{name}}</h1>
+      <p>{{label}}</p>
+    </div>
+    <img src="{{image}}" class="profile-image" />
+    {{#if pdfLink}}
+      <a class="pdf" title="Download PDF" href={{pdfLink}}>
+        {{> download-icon}}
+      </a>
+    {{/if}}
+  </div>
+
+  <div class="contact">
+    <ul>
+      {{#if location}}
+        <li class="grey">{{location.city}}, {{location.countryCode}}</li>
+      {{/if}}
+
+      {{#if email}}
+        <li class="grey">
+          <a href="mailto:{{email}}" target="_blank" rel="noopener noreferrer">{{email}}</a>
+        </li>
+      {{/if}}
+
+      {{#if phone}}
+        <li class="grey">
+          <a href="tel:{{phone}}">{{phone}}</a>
+        </li>
+      {{/if}}
+
+      {{#if website}}
+        <li class="grey">
+          <a href="{{website}}" target="_blank" rel="noopener">website</a>
+        </li>
+      {{/if}}
+
+      {{#each profiles}}
+        <li class="grey">
+          <a href="{{url}}" target="_blank" rel="noopener">{{network}}</a>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+  
+  {{#if summary}}
+    <p class="summary">{{{summary}}}</p>
+  {{/if}}
+
 {{/resume.basics}}
