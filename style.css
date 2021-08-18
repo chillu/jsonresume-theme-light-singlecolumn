@@ -266,6 +266,34 @@ img.profile-image {
   font-size: 12px;
 }
 
+.position {
+  margin-bottom: 1.5rem;
+}
+
+.overview {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.overview .title {
+  flex: 3;
+}
+.overview .date {
+  flex: 1;
+  text-align: right;
+}
+
+.grey {
+  color: var(--sub-headline);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
 .pdf {
   color: var(--headline);
   transition: color ease 160ms;
