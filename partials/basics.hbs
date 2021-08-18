@@ -3,6 +3,37 @@
     <div class="name-label">
       <h1>{{name}}</h1>
       <p>{{label}}</p>
+      <div class="contact">
+        <ul>
+          {{#if location}}
+            <li class="grey">{{location.city}}, {{location.countryCode}}</li>
+          {{/if}}
+
+          {{#if email}}
+            <li class="grey">
+              <a href="mailto:{{email}}" target="_blank" rel="noopener noreferrer">{{email}}</a>
+            </li>
+          {{/if}}
+
+          {{#if phone}}
+            <li class="grey">
+              <a href="tel:{{phone}}">{{phone}}</a>
+            </li>
+          {{/if}}
+
+          {{#if website}}
+            <li class="grey">
+              <a href="{{website}}" target="_blank" rel="noopener">website</a>
+            </li>
+          {{/if}}
+
+          {{#each profiles}}
+            <li class="grey">
+              <a href="{{url}}" target="_blank" rel="noopener">{{network}}</a>
+            </li>
+          {{/each}}
+        </ul>
+      </div>
     </div>
     <img src="{{image}}" class="profile-image" />
     {{#if pdfLink}}
@@ -10,38 +41,6 @@
         {{> download-icon}}
       </a>
     {{/if}}
-  </div>
-
-  <div class="contact">
-    <ul>
-      {{#if location}}
-        <li class="grey">{{location.city}}, {{location.countryCode}}</li>
-      {{/if}}
-
-      {{#if email}}
-        <li class="grey">
-          <a href="mailto:{{email}}" target="_blank" rel="noopener noreferrer">{{email}}</a>
-        </li>
-      {{/if}}
-
-      {{#if phone}}
-        <li class="grey">
-          <a href="tel:{{phone}}">{{phone}}</a>
-        </li>
-      {{/if}}
-
-      {{#if website}}
-        <li class="grey">
-          <a href="{{website}}" target="_blank" rel="noopener">website</a>
-        </li>
-      {{/if}}
-
-      {{#each profiles}}
-        <li class="grey">
-          <a href="{{url}}" target="_blank" rel="noopener">{{network}}</a>
-        </li>
-      {{/each}}
-    </ul>
   </div>
   
   {{#if summary}}

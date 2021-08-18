@@ -148,7 +148,7 @@ body {
 }
 
 h1 {
-  font-size: 56px;
+  font-size: 3rem;
   font-weight: 700;
   font-family: 'Georama', sans-serif;
   line-height: 1em;
@@ -157,7 +157,7 @@ h1 {
 
 h2 {
   margin-top: 2rem;
-  font-size: 24px;
+  font-size: 1.4rem;
   font-weight: 700;
   color: var(--headline);
   font-family: 'Georama', sans-serif;
@@ -165,13 +165,14 @@ h2 {
 
 h3 {
   display: block;
-  font-weight: 600;
-  font-size: 16px;
+  font-weight: 400;
+  font-size: 1.1rem;
   margin-top: 0.5rem;
+  font-family: 'Georama', sans-serif;
 }
 
 h4 {
-  font-size: 14px;
+  font-size: 1.0rem;
   color: var(--sub-headline);
   padding-top: 0.5rem;
   padding-bottom: 0.25rem;
@@ -180,12 +181,12 @@ h4 {
 p,
 li {
   margin-bottom: 0.25rem;
-  font-size: 14px;
+  font-size: 0.9rem;
 }
 
 a {
   transition: box-shadow 160ms ease 0s;
-  box-shadow: var(--secondary) 0px -6px 0px inset;
+  box-shadow: var(--secondary) 0px -4px 0px inset;
   border-bottom: 2px solid var(--primary);
   text-decoration: none;
   color: var(--text);
@@ -209,7 +210,7 @@ img.profile-image {
 
 .contact {
   padding: 1rem 0;
-  font-size: 14px;
+  font-size: 1rem;
 }
 
 .contact ul {
@@ -264,7 +265,7 @@ img.profile-image {
   background-color: var(--secondary);
   white-space: nowrap;
   list-style: none;
-  font-size: 12px;
+  font-size: 0.6rem;
 }
 
 .position {
@@ -276,6 +277,7 @@ img.profile-image {
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
+  align-items: baseline;
 }
 
 .overview .title {
@@ -293,6 +295,7 @@ img.profile-image {
 .header {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 1rem;
 }
 
 .pdf {
@@ -308,8 +311,12 @@ img.profile-image {
 }
 
 @media print {
+  html {
+    font-size: 80%;
+  }
+
   body {
-    padding: 0rem;
+    padding: 1rem 2rem;
   }
 
   section,
@@ -324,7 +331,7 @@ img.profile-image {
 
 @media screen and (max-width: 480px) {
   h1 {
-    font-size: 36px;
+    font-size: 2rem;
   }
   
   img.profile-image {
