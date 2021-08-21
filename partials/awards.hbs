@@ -1,16 +1,24 @@
 {{#if resume.awards.length}}
 <section id="awards">
-	<h2>Awards</h2>
+	<h2>Certificates and Awards</h2>
 	{{#each resume.awards}}
 		<div class="item">
 			<div class="overview">
 				<h3 class="title">
-					{{#if url}}
-						<a target="_blank" rel="noopener" href="{{url}}">{{awarder}}</a>:
+					{{#if name}}
+						{{#if url}}
+							<a target="_blank" rel="noopener" href="{{url}}">{{name}}</a>
+						{{else}}
+							{{name}}
+						{{/if}}
 					{{else}}
-						{{awarder}}:
+						{{#if url}}
+							<a target="_blank" rel="noopener" href="{{url}}">{{awarder}}</a>:
+						{{else}}
+							{{awarder}}:
+						{{/if}}
+						{{title}}
 					{{/if}}
-					{{title}}
 				</h3>
 
 				{{#if date}}

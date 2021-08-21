@@ -31,9 +31,21 @@ function render(resume) {
 
 	  Handlebars.registerPartial(name, template);
 	});
+
+	// Soft resume.awards descending by date
+
+
+	// Combine awards and certificates to make them briefer
+	var awards = resume.awards
+		.concat(resume.certificates)
+		.sort((a,b) => new Date(a.date) > new Date(b.date));
+
 	return Handlebars.compile(tpl)({
 		css: css,
-		resume: resume
+		resume: {
+			...resume,
+			awards
+		}
 	});
 }
 
