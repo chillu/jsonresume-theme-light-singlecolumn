@@ -148,8 +148,8 @@ body {
   max-width: 800px;
   color: var(--text);
   /* DEBUG */
-  background-image: linear-gradient(#eee 1px, transparent 1px);
-  background-size: 100% 1rem;
+  /* background-image: linear-gradient(#eee 1px, transparent 1px);
+  background-size: 100% 1rem; */
 }
 
 h1 {
@@ -187,6 +187,10 @@ p,
 li {
   margin-bottom: 0.25rem;
   font-size: 0.9rem;
+}
+
+strong {
+  font-weight: bold;
 }
 
 a {
@@ -257,10 +261,6 @@ ul.pill li {
   font-size: 0.6rem;
 }
 
-.summary .highlight {
-  font-weight: bold;
-}
-
 .summary a {
   transition: none;
   box-shadow: none;
@@ -298,6 +298,12 @@ ul.pill li {
   display: flex;
   justify-content: space-between;
   margin-bottom: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: .5em;
 }
 
 .pdf {
@@ -340,6 +346,7 @@ ul.pill li {
     width: 80px;
     height: 80px;
   }
+  
 
   .overview {
     display: block;
@@ -347,5 +354,9 @@ ul.pill li {
 
   .overview .date {
     text-align: left;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
   }
 }
