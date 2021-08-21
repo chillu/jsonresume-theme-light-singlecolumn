@@ -36,7 +36,9 @@
         </ul>
       </div>
     </div>
-    <img src="{{image}}" class="profile-image" />
+    {{#if image}}
+      <img src="{{image}}" class="profile-image" />
+    {{/if}}
     {{#if pdfLink}}
       <a class="pdf" title="Download PDF" href={{pdfLink}}>
         {{> download-icon}}
