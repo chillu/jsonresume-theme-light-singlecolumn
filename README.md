@@ -14,6 +14,7 @@ See the [boilerplate theme](https://www.npmjs.org/package/jsonresume-theme-boile
  * Optional profile picture
  * Nicer date formats (e.g. `Jan 2021`)
  * Skills with keywords and URLs (use `keywordsWithUrl`)
+ * Combine `certificates` and `awards` section (with auto date sorting) for brevity
  * Star rating support for easy communication of skill level (e.g. `"level": "3/5"` turns into ★★★☆☆)
 
 See `resume.sample.json` for more formatting hints.
